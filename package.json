@@ -1,9 +1,10 @@
 {
-  "name": "asgard",
+  "name": "csos-uitesting",
   "version": "0.0.0",
+  "author": "Abhimanyu Narwal <anarwal.27@gmail.com>",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "gulp test"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -12,6 +13,26 @@
     "express": "~4.13.1",
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
+    "mocha-phantomjs-core": "^1.0.0",
+    "phantomjs": "1.9.1 - 1.9.7-15",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "chai": "^3.4.1",
+    "chromedriver": "^2.20.0",
+    "connect": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.3.4",
+    "selenium-standalone": "^4.7.1",
+    "serve-static": "^1.10.0",
+    "webdriverio": "^3.2.6"
+  },
+  "description": "UI Tests",
+  "main": "csosTest.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anarwal/asgard.git"
   }
 }

@@ -13,20 +13,16 @@
     "express": "~4.13.1",
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
-    "mocha-phantomjs-core": "^1.0.0",
     "phantomjs": "1.9.1 - 1.9.7-15",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "babel-core": "^6.2.1",
     "chai": "^3.4.1",
     "chromedriver": "^2.20.0",
-    "connect": "^3.4.0",
     "gulp": "^3.9.0",
-    "gulp-mocha": "^2.2.0",
+    "gulp-shell": "^0.5.1",
     "mocha": "^2.3.4",
     "selenium-standalone": "^4.7.1",
-    "serve-static": "^1.10.0",
     "webdriverio": "^3.2.6"
   },
   "description": "UI Tests",

@@ -5,9 +5,12 @@ exports.config = {
     ],
 
     capabilities: [{
-        browserName: 'phantomjs'
+        browserName: 'phantomjs',
+        "phantomjs.binary.path": 'node_modules/phantomjs/lib/phantom/phantomjs.exe'
     }],
-    //
+
+
+//
     // ===================
     // Test Configurations
     // ===================

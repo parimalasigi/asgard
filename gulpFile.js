@@ -1,6 +1,6 @@
 var gulp        = require('gulp'),
     selenium    = require('selenium-standalone'),
-    mocha     = require('gulp-mocha');
+    shell       = require('gulp-shell');
 
 gulp.task('selenium', function (done) {
     selenium.install({
@@ -17,8 +17,12 @@ gulp.task('selenium', function (done) {
 });
 
 gulp.task('integration', ['selenium'], function () {
-    return gulp.src('csosTest.js', {read: false})
-        .pipe(mocha());
+    return gulp.src('wdio-csos.js', {read: false})
+        .pipe(shell(['wdio wdio-csos.js']))
+        .on("error", function(result) {
+        selenium.child.kill();
+        throw new Error("There are failed tests!");
+    });
 });
 
 gulp.task('test', ['integration'], function () {
